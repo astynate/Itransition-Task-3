@@ -1,0 +1,17 @@
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.AssemblyInfoInputs.cache
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.AssemblyInfo.cs
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.csproj.CoreCompileInputs.cache
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\bin\Debug\net8.0\Itransition-Task-3.exe
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\bin\Debug\net8.0\Itransition-Task-3.deps.json
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\bin\Debug\net8.0\Itransition-Task-3.runtimeconfig.json
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\bin\Debug\net8.0\Itransition-Task-3.dll
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\bin\Debug\net8.0\Itransition-Task-3.pdb
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.dll
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\refint\Itransition-Task-3.dll
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.pdb
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.genruntimeconfig.cache
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\ref\Itransition-Task-3.dll
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\bin\Debug\net8.0\ConsoleTables.dll
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.csproj.AssemblyReference.cache
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.csproj.CopyComplete
