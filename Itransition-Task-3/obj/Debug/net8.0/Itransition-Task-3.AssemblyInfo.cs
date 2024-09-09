@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Itransition-Task-3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b772aeae9bf74c0aa76168d30fda8ecb5e36abe")]
 [assembly: System.Reflection.AssemblyProductAttribute("Itransition-Task-3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Itransition-Task-3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

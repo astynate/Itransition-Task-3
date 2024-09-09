@@ -20,6 +20,8 @@
             _computerMoves = new Moves[computerMoves.Length];
             _validateCodes = new ValidateCode[computerMoves.Length];
 
+            Console.WriteLine("Welcome to Itransition Task 3!");
+
             for (int i = 0; i < computerMoves.Length; i++)
             {
                 if (int.TryParse(computerMoves[i], out int value) && Enum.IsDefined(typeof(Moves), value))

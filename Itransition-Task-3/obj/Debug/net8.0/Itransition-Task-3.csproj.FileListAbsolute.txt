@@ -15,3 +15,4 @@ D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\ref\Itrans
 D:\Itransition\Itransition-Task-3\Itransition-Task-3\bin\Debug\net8.0\ConsoleTables.dll
 D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.csproj.AssemblyReference.cache
 D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.csproj.CopyComplete
+D:\Itransition\Itransition-Task-3\Itransition-Task-3\obj\Debug\net8.0\Itransition-Task-3.sourcelink.json

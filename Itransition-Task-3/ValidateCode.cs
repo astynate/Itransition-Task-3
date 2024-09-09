@@ -19,7 +19,7 @@ namespace Itransition_Task_3
 
             byte[] messageBytes = Encoding.UTF8.GetBytes(move.ToString());
 
-            using (var hmac = new HMACSHA3_256(key))
+            using (var hmac = new HMACSHA256(key))
             {
                 byte[] hash = hmac.ComputeHash(messageBytes);
                 Value = BitConverter.ToString(hash).Replace("-", "").ToLower();   
