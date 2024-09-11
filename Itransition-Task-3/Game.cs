@@ -53,11 +53,29 @@
             return (_moveOptions[result], result);
         }
 
+        static bool AreElementsUnique(string[] array)
+        {
+            HashSet<string> seenElements = new HashSet<string>();
+            
+            foreach (var element in array)
+            {
+                if (!seenElements.Add(element))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public static (string? error, Game? instance) Create(string[] moveOptions)
         {
-            if (moveOptions.Length == 0 || moveOptions.Length % 2 == 0)
+            var lengthError = moveOptions.Length == 0 || moveOptions.Length == 1 || moveOptions.Length % 2 == 0;
+            var errorMessage = "You entered incorrect data :( You must enter an odd number of moves like this: 0 1 2";
+
+            if (lengthError || AreElementsUnique(moveOptions) == false)
             {
-                return ("You entered incorrect data :( You must enter an odd number of moves like this: 0 1 2", null);
+                return (errorMessage, null);
             }
 
             return (null, new Game(moveOptions));
