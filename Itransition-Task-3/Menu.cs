@@ -57,6 +57,27 @@ namespace Itransition_Task_3
             Console.WriteLine($"Your move: {moveOptions[move.PlayerMoveIndex]}");
             Console.WriteLine($"Computer move: {moveOptions[move.ComputerMoveIndex]}");
             Console.WriteLine($"Result: {move.Result}");
+            Console.WriteLine($"You can check result: https://www.devglan.com/online-tools/hmac-sha256-online#google_vignette");
+        }
+
+        public static void PrintHelpTable(string[] moveOptions)
+        {
+            var table = new ConsoleTable(new string[] { "U / C" }.Concat(moveOptions).ToArray());
+
+            for (int i = 0; i < moveOptions.Length; i++)
+            {
+                List<string> row = [moveOptions[i]];
+
+                for (int k = 0; k < moveOptions.Length; k++)
+                {
+                    Move move = new Move(i, k, new ValidationCode("None"), moveOptions.Length);
+                    row.Add(move.Result.ToString());
+                }
+
+                table.AddRow(row.ToArray());
+            }
+
+            table.Write();
         }
 
         public static void PrintDevide() => Console.WriteLine("==========================================");

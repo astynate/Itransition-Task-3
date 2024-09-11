@@ -57,7 +57,7 @@
         {
             if (moveOptions.Length == 0 || moveOptions.Length % 2 == 0)
             {
-                return ("You entered incorrect data :(. You must enter an odd number of moves like this: 0 1 2", null);
+                return ("You entered incorrect data :( You must enter an odd number of moves like this: 0 1 2", null);
             }
 
             return (null, new Game(moveOptions));
@@ -74,7 +74,7 @@
 
         public void HandleHelpTable()
         {
-            Console.WriteLine("Help");
+            Menu.PrintHelpTable(_moveOptions);
         }
 
         public void HandleGamesTable()

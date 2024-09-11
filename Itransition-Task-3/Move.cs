@@ -17,12 +17,7 @@
 
         public static Results GetMoveResult(int player, int computer, int n)
         {
-            if (player == computer)
-            {
-                return Results.Draw;
-            }
-
-            return ((player + (n >> 1)) % n) < computer ? Results.Win : Results.Lose;
+            return (Results)Math.Sign((player - computer + (n >> 1) + n) % n - (n >> 1));
         }
     }
 }

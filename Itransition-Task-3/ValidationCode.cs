@@ -10,22 +10,24 @@ namespace Itransition_Task_3
 
         public ValidationCode(string move)
         {
-            byte[] key = new byte[32];
+            Key = Guid.NewGuid().ToString();
 
-            using (var rng = RandomNumberGenerator.Create())
+            var messageBytes = Encoding.UTF8.GetBytes(move);
+            var keyAsBytes = Encoding.UTF8.GetBytes(Key);
+
+            Value = ByteArrayToHex(HMACSHA256.HashData(keyAsBytes, messageBytes));
+        }
+
+        static string ByteArrayToHex(byte[] buff)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < buff.Length; i++)
             {
-                rng.GetBytes(key);
+                stringBuilder.Append(buff[i].ToString("x2"));
             }
-
-            byte[] messageBytes = Encoding.UTF8.GetBytes(move);
-
-            using (var hmac = new HMACSHA256(key))
-            {
-                byte[] hash = hmac.ComputeHash(messageBytes);
-
-                Key = BitConverter.ToString(key);
-                Value = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
-            }
+            
+            return stringBuilder.ToString();
         }
     }
 }
