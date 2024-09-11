@@ -3,12 +3,12 @@ using System.Text;
 
 namespace Itransition_Task_3
 {
-    public class ValidateCode
+    public class ValidationCode
     {
-        public string Key { get; private set; } = Guid.NewGuid().ToString();
+        public string Key { get; private set; } = string.Empty;
         public string Value { get; private set; } = string.Empty;
 
-        public ValidateCode(Moves move)
+        public ValidationCode(string move)
         {
             byte[] key = new byte[32];
 
@@ -17,12 +17,14 @@ namespace Itransition_Task_3
                 rng.GetBytes(key);
             }
 
-            byte[] messageBytes = Encoding.UTF8.GetBytes(move.ToString());
+            byte[] messageBytes = Encoding.UTF8.GetBytes(move);
 
             using (var hmac = new HMACSHA256(key))
             {
                 byte[] hash = hmac.ComputeHash(messageBytes);
-                Value = BitConverter.ToString(hash).Replace("-", "").ToLower();   
+
+                Key = BitConverter.ToString(key);
+                Value = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
             }
         }
     }

@@ -2,48 +2,27 @@
 {
     public class Move
     {
-        public Moves? PlayerMove { get; private set; }
-        public Moves? ComputerMove { get; private set; }
-        public Results? Result { get; private set; }
-        public ValidateCode? Code { get; private set; }
+        public int PlayerMoveIndex { get; private set; }
+        public int ComputerMoveIndex { get; private set; }
+        public Results Result { get; private set; }
+        public ValidationCode Code { get; private set; }
 
-        public Move(Moves player, Moves computer, ValidateCode code) 
+        public Move(int player, int computer, ValidationCode code, int n) 
         {
-            PlayerMove = player;
-            ComputerMove = computer;
-            Result = GetMoveResult(player, computer);
+            PlayerMoveIndex = player;
+            ComputerMoveIndex = computer;
+            Result = GetMoveResult(player, computer, n);
             Code = code;
         }
 
-        public static Results GetMoveResult(Moves? playerMoveValue, Moves? computerMoveValue)
+        public static Results GetMoveResult(int player, int computer, int n)
         {
-            List<(Moves one, Moves two, int result)> results = [
-                (Moves.Paper, Moves.Scissors, -1),
-                (Moves.Paper, Moves.Rock, 1),
-                (Moves.Scissors, Moves.Rock, -1),
-            ];
-
-            Results result = Results.Lose;
-
-            if (playerMoveValue == computerMoveValue)
+            if (player == computer)
             {
                 return Results.Draw;
             }
 
-            foreach (var value in results)
-            {
-                if (value.one == playerMoveValue && value.two == computerMoveValue)
-                {
-                    result = (Results)value.result; break;
-                }
-                
-                if (value.one == computerMoveValue && value.two == playerMoveValue)
-                {
-                    result = (Results)(-1 * value.result); break;
-                }
-            }
-
-            return result;
+            return ((player + (n >> 1)) % n) < computer ? Results.Win : Results.Lose;
         }
     }
 }
