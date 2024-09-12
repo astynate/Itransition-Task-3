@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Itransition-Task-3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae58b4b840225cd71ee028d4fa5054f464c09dd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a43151b89ef0003994242ce1d02fd71c6d1d2a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Itransition-Task-3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Itransition-Task-3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

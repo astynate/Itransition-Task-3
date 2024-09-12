@@ -10,7 +10,14 @@ namespace Itransition_Task_3
 
         public ValidationCode(string move)
         {
-            Key = Guid.NewGuid().ToString();
+            var key = new byte[32];
+
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(key);
+            }
+
+            Key = ByteArrayToHex(key);
 
             var messageBytes = Encoding.UTF8.GetBytes(move);
             var keyAsBytes = Encoding.UTF8.GetBytes(Key);
